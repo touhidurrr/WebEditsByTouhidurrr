@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         WebEditsByTouhidurrr
-// @namespace    http://tampermonkey.net/
-// @version      0.0.11
+// @namespace    https://touhidur.xyz/
+// @version      0.0.12
 // @description  WebEditsByTouhidurrr is an UserScript written in Javascript that does nothing but fixing the web as touhidurrr likes. Simply it's my personal UserScript.
 // @author       touhidurrr
 // @match        http*://*.wordpress.com/*
