@@ -1,17 +1,17 @@
 // ==UserScript==
 // @name            WebEditsByTouhidurrr
 // @name:en         WebEditsByTouhidurrr
-// @namespace       http://tampermonkey.net/
-// @version         0.0.14
+// @version         0.0.15
+// @author          touhidurrr
 // @description     WebEditsByTouhidurrr is an UserScript written in Javascript that does nothing but fixing the web as touhidurrr likes. Simply it's my personal UserScript.
 // @description:en  WebEditsByTouhidurrr is an UserScript written in Javascript that does nothing but fixing the web as touhidurrr likes. Simply it's my personal UserScript.
-// @author          touhidurrr
+// @namespace       http://tampermonkey.net/
+// @icon            https://touhidur.xyz/favicon.png
 // @homepageURL     https://touhidur.xyz/
 // @updateURL       https://github.com/touhidurrr/WebEditsByTouhidurrr/raw/main/main.user.js
 // @downloadURL     https://github.com/touhidurrr/WebEditsByTouhidurrr/raw/main/main.user.js
-// @match           http*://*.wordpress.com/*
-// @icon            https://touhidur.xyz/favicon.png
 // @grant           none
+// @match           https://*.wordpress.com/*
 // ==/UserScript==
 
 Element.prototype.remove = function() {
