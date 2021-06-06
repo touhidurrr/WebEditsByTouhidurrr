@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            WebEditsByTouhidurrr
 // @name:en         WebEditsByTouhidurrr
-// @version         0.0.16
+// @version         0.0.17
 // @author          touhidurrr
 // @description     WebEditsByTouhidurrr is an UserScript written in Javascript that does nothing but fixing the web as touhidurrr likes. Simply it's my personal UserScript.
 // @description:en  WebEditsByTouhidurrr is an UserScript written in Javascript that does nothing but fixing the web as touhidurrr likes. Simply it's my personal UserScript.
@@ -20,7 +20,7 @@ Element.prototype.remove = function() {
 }
 
 NodeList.prototype.remove = HTMLCollection.prototype.remove = function() {
-  for(var i = this.length - 1; i >= 0; i--) {
+  for(let i = this.length - 1; i > -1; i--) {
     if(this[i] && this[i].parentElement) {
       this[i].parentElement.removeChild(this[i]);
     }
