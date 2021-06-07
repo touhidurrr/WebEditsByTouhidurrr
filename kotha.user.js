@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name            kotha
-// @version         0.0.4
+// @version         0.0.5
 // @author          touhidurrr
 // @description     An UserScript that I made for my friend to highlight the name of theperson he likes.
-// @run-at          document-end
+// @run-at          document-idle
 // @namespace       http://tampermonkey.net/
 // @icon            https://touhidur.xyz/favicon.png
 // @homepageURL     https://touhidur.xyz/
