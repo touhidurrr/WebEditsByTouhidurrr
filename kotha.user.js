@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name            kotha
-// @version         0.0.3
+// @version         0.0.4
 // @author          touhidurrr
 // @description     An UserScript that I made for my friend to highlight the name of theperson he likes.
 // @run-at          document-end
@@ -21,7 +21,7 @@
           replaceInText(node, pattern, replacement);
           break;
         case Node.TEXT_NODE:
-          node.textContent = node.textContent.replace(pattern, replacement);
+          node.innerHTML = node.innerHTML.replace(pattern, replacement);
           break;
         case Node.DOCUMENT_NODE:
           replaceInText(node, pattern, replacement);
