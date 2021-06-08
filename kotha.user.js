@@ -1,18 +1,19 @@
 // ==UserScript==
 // @name            kotha
-// @version         0.0.20
+// @version         0.0.21
 // @author          touhidurrr
 // @description     An UserScript that I made for my friend to highlight the name of theperson he likes.
-// @run-at          document-idle
+// @run-at          document-end
 // @namespace       http://tampermonkey.net/
 // @icon            https://touhidur.xyz/favicon.png
 // @homepageURL     https://touhidur.xyz/
 // @updateURL       https://raw.githubusercontent.com/touhidurrr/WebEditsByTouhidurrr/main/kotha.user.js
 // @downloadURL     https://raw.githubusercontent.com/touhidurrr/WebEditsByTouhidurrr/main/kotha.user.js
 // @grant           none
-// @match           *
+// @match           https://*
+// @match           http://*
 // ==/UserScript==
 
-document.body.innerHTML = document.body.innerHTML.replace(/kotha/gi, function(s){
+document.body.innerHTML = String(document.body.innerHTML).replace(/kotha/gi, function(s){
   return '<font style="color:black;background:yellow;">' + s + '</font>';
 });
