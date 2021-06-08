@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name            kotha
-// @version         0.0.10
+// @version         0.0.11
 // @author          touhidurrr
 // @description     An UserScript that I made for my friend to highlight the name of theperson he likes.
 // @run-at          document-idle
@@ -10,7 +10,7 @@
 // @updateURL       https://github.com/touhidurrr/WebEditsByTouhidurrr/raw/main/kotha.user.js
 // @downloadURL     https://github.com/touhidurrr/WebEditsByTouhidurrr/raw/main/kotha.user.js
 // @grant           none
-// @match           *
+// @match           http*://*
 // ==/UserScript==
 
 (function() {
