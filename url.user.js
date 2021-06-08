@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            URL-touhidurrr
 // @name:en         URL-touhidurrr
-// @version         0.0.2
+// @version         0.0.4
 // @author          touhidurrr
 // @description     An URL redirection Manager for touhidurrr
 // @description:en  An URL redirection Manager for touhidurrr
@@ -20,5 +20,5 @@
     'ugadmission.buet.ac.bd',
     'uga1.buet.ac.bd'
   ];
-  if (!excludeList.includes(location.hostname)) window.location.replace('https' + location.href.slice(4));
+  if (!excludeList.includes(window.location.hostname)) window.location.replace('https' + window.location.href.slice(4));
 })();
