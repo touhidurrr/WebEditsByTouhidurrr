@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name            kotha
-// @version         0.0.11
+// @version         0.0.12
 // @author          touhidurrr
 // @description     An UserScript that I made for my friend to highlight the name of theperson he likes.
 // @run-at          document-idle
@@ -14,7 +14,7 @@
 // ==/UserScript==
 
 (function() {
-  function replaceInText(element, pattern, replacement) {
+  let replaceInText = function(element, pattern, replacement) {
     for (let node of element.childNodes) {
       switch (node.nodeType) {
         case Node.ELEMENT_NODE:
