@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name            kotha
-// @version         0.0.5
+// @version         0.0.6
 // @author          touhidurrr
 // @description     An UserScript that I made for my friend to highlight the name of theperson he likes.
 // @run-at          document-idle
@@ -28,5 +28,5 @@
       }
     }
   }
-  replaceInText(document.body, /(kotha)/ig, '<div style="color:black;background:yellow;">$1<\/div>');
+  replaceInText(document.body, /kotha/ig, (m) => {'<div style="color:black;background:yellow;">' + s + '<\/div>'});
 })();
