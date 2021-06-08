@@ -14,19 +14,5 @@
 // ==/UserScript==
 
 (function() {
-  let replaceInText = function(element, pattern, replacement) {
-    for (let node of element.childNodes) {
-      switch (node.nodeType) {
-        case Node.ELEMENT_NODE:
-          replaceInText(node, pattern, replacement);
-          break;
-        case Node.TEXT_NODE:
-          node.innerHTML = node.innerHTML.replace(pattern, replacement);
-          break;
-        case Node.DOCUMENT_NODE:
-          replaceInText(node, pattern, replacement);
-      }
-    }
-  }
-  replaceInText(document.body, /kotha/gi, function(s){return '<div style="color:black;background:yellow;">' + s + '<\/div>';});
+  document.body.innerHTML = document.body.innerHTML.replace(/kotha/gi, function(s){return '<div style="color:black;background:yellow;">' + s + '<\/div>';});
 })();
