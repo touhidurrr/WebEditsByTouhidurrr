@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name            kotha
-// @version         0.0.21
+// @version         0.0.23
 // @author          touhidurrr
 // @description     An UserScript that I made for my friend to highlight the name of theperson he likes.
 // @run-at          document-end
@@ -14,6 +14,6 @@
 // @match           http://*
 // ==/UserScript==
 
-document.body.innerHTML = String(document.body.innerHTML).replace(/kotha/gi, function(s){
+document.body.innerHTML = document.body.innerHTML.replace(/kotha/gi, function(s){
   return '<font style="color:black;background:yellow;">' + s + '</font>';
 });
