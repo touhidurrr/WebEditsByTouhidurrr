@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name            kotha
-// @version         0.0.23
+// @version         0.0.22
 // @author          touhidurrr
 // @description     An UserScript that I made for my friend to highlight the name of theperson he likes.
 // @run-at          document-end
