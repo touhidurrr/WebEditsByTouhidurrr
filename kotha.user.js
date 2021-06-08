@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name            kotha
-// @version         0.0.19
+// @version         0.0.20
 // @author          touhidurrr
 // @description     An UserScript that I made for my friend to highlight the name of theperson he likes.
 // @run-at          document-idle
@@ -10,7 +10,7 @@
 // @updateURL       https://raw.githubusercontent.com/touhidurrr/WebEditsByTouhidurrr/main/kotha.user.js
 // @downloadURL     https://raw.githubusercontent.com/touhidurrr/WebEditsByTouhidurrr/main/kotha.user.js
 // @grant           none
-// @match           http*://*
+// @match           *
 // ==/UserScript==
 
 document.body.innerHTML = document.body.innerHTML.replace(/kotha/gi, function(s){
