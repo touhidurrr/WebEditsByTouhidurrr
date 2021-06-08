@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            URL-touhidurrr
 // @name:en         URL-touhidurrr
-// @version         0.0.1
+// @version         0.0.2
 // @author          touhidurrr
 // @description     An URL redirection Manager for touhidurrr
 // @description:en  An URL redirection Manager for touhidurrr
@@ -12,7 +12,7 @@
 // @updateURL       https://github.com/touhidurrr/WebEditsByTouhidurrr/raw/main/url.user.js
 // @downloadURL     https://github.com/touhidurrr/WebEditsByTouhidurrr/raw/main/url.user.js
 // @grant           none
-// @match           http://*
+// @include         http://*
 // ==/UserScript==
 
 (function() {
