@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            URL-touhidurrr
 // @name:en         URL-touhidurrr
-// @version         0.0.4
+// @version         0.0.5
 // @author          touhidurrr
 // @description     An URL redirection Manager for touhidurrr
 // @description:en  An URL redirection Manager for touhidurrr
