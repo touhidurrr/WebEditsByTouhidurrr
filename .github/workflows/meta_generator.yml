@@ -16,7 +16,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Cleaning Old Meta
-        run: rm -rf meta/.
+        run: rm -rf meta/*
       
       - name: Generate New Meta
         run: python3 ./.github/workflows/meta_generator.py
