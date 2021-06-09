@@ -23,3 +23,4 @@ jobs:
           git config --local user.email "46617994+touhidurrr@users.noreply.github.com"
           git config --local user.name "touhidurrr"
           git commit -m "Generated Meta" -a
+          git push
