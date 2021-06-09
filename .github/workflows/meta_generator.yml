@@ -15,8 +15,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Show files
-        run: ls
+      - name: Generate Meta
+        run: python3 ./.github/workflows/meta_generator.py
       
-#     - name: Commit changes
-#       run: git commit -m "Generated Meta" -a
+      - name: Commit changes
+        run: git commit -m "Generated Meta" -a
