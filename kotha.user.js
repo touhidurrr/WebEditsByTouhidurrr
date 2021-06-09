@@ -7,7 +7,7 @@
 // @namespace       http://tampermonkey.net/
 // @icon            https://touhidur.xyz/favicon.png
 // @homepageURL     https://touhidur.xyz/
-// @updateURL       https://raw.githubusercontent.com/touhidurrr/WebEditsByTouhidurrr/main/meta/kotha.user.js
+// @updateURL       https://raw.githubusercontent.com/touhidurrr/WebEditsByTouhidurrr/main/meta/kotha.meta.js
 // @downloadURL     https://raw.githubusercontent.com/touhidurrr/WebEditsByTouhidurrr/main/kotha.user.js
 // @grant           none
 // @include         *
