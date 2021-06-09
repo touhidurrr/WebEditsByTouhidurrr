@@ -9,7 +9,7 @@
 // @namespace       http://tampermonkey.net/
 // @icon            https://touhidur.xyz/favicon.png
 // @homepageURL     https://touhidur.xyz/
-// @updateURL       https://github.com/touhidurrr/WebEditsByTouhidurrr/raw/main/meta/webedits.user.js
+// @updateURL       https://github.com/touhidurrr/WebEditsByTouhidurrr/raw/main/meta/webedits.meta.js
 // @downloadURL     https://github.com/touhidurrr/WebEditsByTouhidurrr/raw/main/webedits.user.js
 // @grant           none
 // @match           https://*.wordpress.com/*
