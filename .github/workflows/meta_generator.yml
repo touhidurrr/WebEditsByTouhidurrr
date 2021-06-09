@@ -16,7 +16,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Show files
-        run: ls | echo
+        run: ls
       
 #     - name: Commit changes
 #       run: git commit -m "Generated Meta" -a
