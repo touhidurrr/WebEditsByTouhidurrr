@@ -10,8 +10,8 @@ for path in fileList:
     for line in f.readlines():
       meta += line
       
-    if line == '// ==/UserScript==\n':
-      break
+      if line == '// ==/UserScript==\n':
+        break
   
   metaPath = './meta/' + path[:-8] + '.meta.js'
   with open(metaPath, mode = 'w') as f:
