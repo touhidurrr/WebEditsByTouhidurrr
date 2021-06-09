@@ -15,12 +15,15 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Generate Meta
+      - name: Cleaning Old Meta
+        run: rm -rf meta/.
+      
+      - name: Generate New Meta
         run: python3 ./.github/workflows/meta_generator.py
       
       - name: Commit changes
         run: |
           git config --local user.email "46617994+touhidurrr@users.noreply.github.com"
           git config --local user.name "touhidurrr"
-          git commit -m "Generated Meta" -a meta/.
+          git commit -m "Generated Meta" -a meta
           git push
