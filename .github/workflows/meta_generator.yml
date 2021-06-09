@@ -3,10 +3,10 @@ name: Meta Generator
 on:
   push:
     paths:
-      - '*.js'
+      - '*.user.js'
   pull_request:
     paths:
-      - '*.js'
+      - '*.user.js'
   workflow_dispatch:
 
 jobs:
