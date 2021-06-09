@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name            kotha
-// @version         0.0.23
+// @version         0.0.24
 // @author          touhidurrr
 // @description     An UserScript that I made for my friend to highlight the name of theperson he likes.
 // @run-at          document-end
@@ -17,7 +17,7 @@
   for (let node=document.body;node;node=node.nextSibling){
     if (node.nodeType==1) {
       node.innerHTML = node.innerHTML.replace(/kotha/gi, function(s) {
-       return '<font style="color:black;background:yellow;">' + s + '</font>';
+       return '<span style="color:black;background:yellow;">' + s + '</span>';
       });
     }
   }
