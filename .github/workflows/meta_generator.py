@@ -9,7 +9,7 @@ for path in fileList:
     
     for line in f.readlines():
       
-      if line[:2] != '//':
+      if !line.startswith('//'):
         continue
       
       meta += line
