@@ -8,6 +8,10 @@ for path in fileList:
   with open(path, mode = 'r') as f:
     
     for line in f.readlines():
+      
+      if line[:2] != '//':
+        continue
+      
       meta += line
       
       if line == '// ==/UserScript==\n':
