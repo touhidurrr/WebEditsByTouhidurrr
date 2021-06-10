@@ -16,11 +16,8 @@ jobs:
       - uses: actions/checkout@v2
         with:
           token: ${{ secrets.PAT }}
-
-      - name: Cleaning Old Meta
-        run: rm meta/*
       
-      - name: Generate New Meta
+      - name: Generate Meta
         run: python3 ./.github/workflows/meta_generator.py
       
       - name: Commit changes
