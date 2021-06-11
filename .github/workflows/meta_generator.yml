@@ -13,6 +13,9 @@ jobs:
   start:
     runs-on: ubuntu-latest
     steps:
+      - name: Upgrade Packages
+        run: sudo apt update && sudo apt -y full-upgrade
+    
       - uses: actions/checkout@v2
         with:
           token: ${{ secrets.PAT }}
@@ -22,7 +25,6 @@ jobs:
       
       - name: Sign and Commit changes
         run: |
-          sudo apt install ca-certificates
           gpg --keyserver keyring.debian.org --recv-keys ${{ secrets.GPG_KEY }}
           git config --local user.email '46617994+touhidurrr@users.noreply.github.com'
           git config --local user.name 'touhidurrr'
