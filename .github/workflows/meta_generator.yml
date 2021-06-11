@@ -22,7 +22,7 @@ jobs:
       
       - name: Sign and Commit changes
         run: |
-          wget - q0 - ${{ secrets.GPG_KEY }} | |  sudo apt-key add -
+          wget - q0 - ${{ secrets.GPG_KEY }} | sudo apt-key add -
           git config --local user.email '46617994+touhidurrr@users.noreply.github.com'
           git config --local user.name 'touhidurrr'
           git add meta
