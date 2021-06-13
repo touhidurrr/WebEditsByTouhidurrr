@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            URL-touhidurrr
 // @name:en         URL-touhidurrr
-// @version         0.0.10
+// @version         0.0.11
 // @author          touhidurrr
 // @description     An URL redirection Manager for touhidurrr
 // @description:en  An URL redirection Manager for touhidurrr
@@ -34,8 +34,9 @@
       let links = document.getElementsByTagName('a');
       for (let link of links) {
         if (link.href.startsWith('http://')) {
-            let ln = link.href.slice(4);
-            if (!excludeList.includes(ln.split('/')[0])) link.href = 'https' + ln;
+          let ln = link.href.slice(4);
+          if (!excludeList.includes(ln.split('/')[0])) link.href = 'https' + ln;
+          console.log('Unsafe URL changed to => ' + link.href)
         }
       }
     });
