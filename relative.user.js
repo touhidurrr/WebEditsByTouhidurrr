@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            Relative-touhidurrr
 // @name:en         Relative-touhidurrr
-// @version         0.0.1
+// @version         0.0.2
 // @description     A tools to change absolute urls to relative urls during accessing html files from device Storage.
 // @description:en  A tools to change absolute urls to relative urls during accessing html files from device Storage.
 // @author          touhidurrr
@@ -34,6 +34,7 @@
   for (let link of links) {
     if (link.hostname == host) {
       // Preliminary Calculations
+      if (!link.href.endsWith('/')) link.href += '/';
       let split = link.pathname.split('/');
       let linkDepth = split.length;
 
