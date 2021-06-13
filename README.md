@@ -5,6 +5,8 @@ To install this userscript press [WebEdits.](https://raw.githubusercontent.com/t
 
 There is another UserScript for URL Redirecting. Install it by clicking [URL-touhidurrr.](https://raw.githubusercontent.com/touhidurrr/WebEditsByTouhidurrr/main/url.user.js)
 
+And my personal script for editing filePaths in local html files, Relative-touhidurrr. Installation link ==> [install!](https://raw.githubusercontent.com/touhidurrr/WebEditsByTouhidurrr/main/relative.user.js)
+
 Another UserScript for my friend [kotha](https://raw.githubusercontent.com/touhidurrr/WebEditsByTouhidurrr/main/kotha.user.js)
 
 [test](http://example.com/)
