@@ -1,4 +1,4 @@
-name: Meta Generator
+name: Parser & Meta Generator
 
 on:
   push:
@@ -16,6 +16,11 @@ jobs:
       - uses: actions/checkout@v2
         with:
           token: ${{ secrets.PAT }}
+      
+      - name: Install & Prittier
+        run: |
+          sudo npm install --global prittier
+          prittier --write .
       
       - name: Generate Meta
         run: python3 ./.github/workflows/meta_generator.py
