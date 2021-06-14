@@ -2,13 +2,9 @@ name: Parser & Meta Generator
 
 on:
   push:
-    paths:
-      - '*.user.js'
-      - '.github/workflows/parser.yml'
+    branches: main
   pull_request:
-    paths:
-      - '*.user.js'
-      - '.github/workflows/parser.yml'
+    branches: main
   workflow_dispatch:
 
 jobs:
