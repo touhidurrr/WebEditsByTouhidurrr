@@ -16,21 +16,21 @@ jobs:
       - uses: actions/checkout@v2
         with:
           token: ${{ secrets.PAT }}
-      
+
       - name: Setup Node.js environment
         uses: actions/setup-node@v2.1.5
         with:
           node-version: '16'
           check-latest: true
-      
+
       - name: Install & Use Prettier
         run: |
           sudo npm install --global prettier
           prettier --write .
-      
+
       - name: Generate Meta
         run: python3 ./.github/workflows/meta_generator.py
-      
+
       - name: Commit changes
         run: |
           git config --local user.email '46617994+touhidurrr@users.noreply.github.com'
