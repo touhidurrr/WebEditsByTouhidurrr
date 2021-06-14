@@ -4,9 +4,11 @@ on:
   push:
     paths:
       - '*.user.js'
+      - '.github/workflows/parser.yml'
   pull_request:
     paths:
       - '*.user.js'
+      - '.github/workflows/parser.yml'
   workflow_dispatch:
 
 jobs:
@@ -36,5 +38,5 @@ jobs:
           git config --local user.email '46617994+touhidurrr@users.noreply.github.com'
           git config --local user.name 'touhidurrr'
           git add .
-          git commit -m 'Parsed files and Generated Meta'
+          git commit -m '[automated edit]'
           git push
