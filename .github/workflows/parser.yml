@@ -31,5 +31,5 @@ jobs:
           git config --local user.name 'touhidurrr'
           git add meta
           git add *.user.js
-          git commit -m "Generated Meta"
+          git commit -m 'Parsed files and Generated Meta'
           git push
