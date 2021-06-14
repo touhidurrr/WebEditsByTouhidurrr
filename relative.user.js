@@ -16,7 +16,7 @@
 // @include         file://*
 // ==/UserScript==
 
-(function() {
+(function () {
   let sitesPath = 'file:///home/pi/sites/';
   let filePath = window.location.href.slice(sitesPath.length);
   let fileSlices = filePath.split('/');
@@ -39,11 +39,12 @@
       let linkDepth = split.length;
 
       // Change the links!
-      if (hostDepth < linkDepth) link.href = link.pathname.slice(filePath.length - 10) + 'index.html';
+      if (hostDepth < linkDepth)
+        link.href = link.pathname.slice(filePath.length - 10) + 'index.html';
       else link.href = '../'.repeat(hostDepth - linkDepth) + 'index.html';
 
       // Log it!
-      console.log('Link changed to => ' + link.href)
+      console.log('Link changed to => ' + link.href);
     }
   }
 })();

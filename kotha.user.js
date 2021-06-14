@@ -14,10 +14,10 @@
 // @include         *
 // ==/UserScript==
 
-(function(){
-  for (let node=document.body;node;node=node.nextSibling){
-    if (node.nodeType==1) {
-      node.innerHTML = node.innerHTML.replace(/kotha/gi, function(s) {
+(function () {
+  for (let node = document.body; node; node = node.nextSibling) {
+    if (node.nodeType == 1) {
+      node.innerHTML = node.innerHTML.replace(/kotha/gi, function (s) {
         return '<span style="color:black;background:yellow;">' + s + '</span>';
       });
     }

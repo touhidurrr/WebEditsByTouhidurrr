@@ -16,28 +16,26 @@
 // @include         *
 // ==/UserScript==
 
-(function() {
+(function () {
   let excludeList = [
     'ugadmission.buet.ac.bd',
     'uga1.buet.ac.bd',
     'touhidur',
-    'localhost'
+    'localhost',
   ];
 
   if (window.location.href.startsWith('http://')) {
     if (!excludeList.includes(window.location.hostname)) {
       window.location.replace('https' + window.location.href.slice(4));
     }
-  }
-
-  else {
-    document.addEventListener("DOMContentLoaded", function(e) {
+  } else {
+    document.addEventListener('DOMContentLoaded', function (e) {
       let links = document.getElementsByTagName('a');
       for (let link of links) {
         if (link.href.startsWith('http://')) {
           let ln = link.href.slice(4);
           if (!excludeList.includes(ln.split('/')[0])) link.href = 'https' + ln;
-          console.log('Unsafe URL changed to => ' + link.href)
+          console.log('Unsafe URL changed to => ' + link.href);
         }
       }
     });
