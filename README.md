@@ -8,6 +8,6 @@ There is another UserScript for URL Redirecting. Install it by clicking [URL-tou
 
 And my personal script for editing filePaths in local html files, **_Relative-touhidurrr_**. Installation link ==> [install!](https://raw.githubusercontent.com/touhidurrr/WebEditsByTouhidurrr/main/relative.user.js)
 
-Another UserScript for my friend [kotha](https://raw.githubusercontent.com/touhidurrr/WebEditsByTouhidurrr/main/kotha.user.js)
+Another UserScript for my friend [kotha](https://raw.githubusercontent.com/touhidurrr/WebEditsByTouhidurrr/main/kotha.user.js) **[Experimental]**
 
 [test](http://example.com/)
