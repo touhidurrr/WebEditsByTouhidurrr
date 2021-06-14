@@ -23,7 +23,7 @@ jobs:
           node-version: '16'
           check-latest: true
       
-      - name: Install & Prettier
+      - name: Install & Use Prettier
         run: |
           sudo npm install --global prettier
           prettier --write .
