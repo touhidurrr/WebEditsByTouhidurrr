@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            Relative-touhidurrr
 // @name:en         Relative-touhidurrr
-// @version         0.0.2
+// @version         0.0.3
 // @description     A tools to change absolute urls to relative urls during accessing html files from device Storage.
 // @description:en  A tools to change absolute urls to relative urls during accessing html files from device Storage.
 // @author          touhidurrr
@@ -17,7 +17,7 @@
 // ==/UserScript==
 
 (function () {
-  let sitesPath = 'file:///home/pi/sites/';
+  let sitesPath = 'file:///home/pi/Desktop/Sites';
   let filePath = window.location.href.slice(sitesPath.length);
   let fileSlices = filePath.split('/');
   let host, hostDepth;
