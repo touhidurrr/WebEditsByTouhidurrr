@@ -1,6 +1,6 @@
-import glob
+from glob import glob
 
-fileList = glob.glob("*.user.js")
+fileList = glob("*.user.js")
 
 for path in fileList:
   meta = ''
