@@ -35,4 +35,5 @@ jobs:
           git config --local user.name 'touhidurrr'
           git add .
           git commit -m '[automated edit]'
+          git pull
           git push
