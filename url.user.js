@@ -20,6 +20,8 @@
   let excludeList = [
     'ugadmission.buet.ac.bd',
     'uga1.buet.ac.bd',
+    'teletalk.com.bd',
+    'gov.bd',
     'touhidur',
     'localhost',
   ];
