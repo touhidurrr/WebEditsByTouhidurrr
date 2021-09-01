@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            URL-touhidurrr
 // @name:en         URL-touhidurrr
-// @version         0.0.15
+// @version         0.0.16
 // @description     An URL redirection Manager for touhidurrr
 // @description:en  An URL redirection Manager for touhidurrr
 // @author          touhidurrr
@@ -13,15 +13,14 @@
 // @updateURL       https://raw.githubusercontent.com/touhidurrr/WebEditsByTouhidurrr/main/meta/url.meta.js
 // @downloadURL     https://raw.githubusercontent.com/touhidurrr/WebEditsByTouhidurrr/main/url.user.js
 // @grant           none
-// @include         *
+// @include         http*
 // ==/UserScript==
 
 (function () {
   let excludeList = [
-    'ugadmission.buet.ac.bd',
-    'uga1.buet.ac.bd',
-    'teletalk.com.bd',
+    'ac.bd',
     'gov.bd',
+    'teletalk.com.bd',
     'touhidur',
     'localhost',
   ];
