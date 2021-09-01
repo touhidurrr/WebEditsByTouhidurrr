@@ -17,33 +17,32 @@
 
 (function () {
   const path = window.location.href;
-  
+
   for (let slice of path.split('/')) {
     if (slice.includes('.')) {
       var host = slice;
       break;
     }
   }
-  
+
   if (!host) {
     console.log('Relative Paths: Error! Host folder cannot be detected!');
     return;
   }
-  
-  const sitePath =  path.substr(0, path.indexOf(host) + host.length);
-  
+
+  const sitePath = path.substr(0, path.indexOf(host) + host.length);
+
   let filePath = path.slice(path.indexOf(host) + host.length);
   if (filePath.endsWith('/index.html'))
     filePath = filePath.substr(0, filePath.length - 'index.html'.length);
-  
+
   const hostDepth = filePath.split('/').length;
 
   let links = document.getElementsByTagName('a');
   for (let link of links) {
     if (link.hostname == host) {
-      if (link.href.endsWith('/'))
-        link.href += 'index.html';
-      
+      if (link.href.endsWith('/')) link.href += 'index.html';
+
       const linkSlices = link.pathname.split('/');
       const linkDepth = linkSlices.length;
 
