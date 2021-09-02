@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            Relative-touhidurrr
 // @name:en         Relative-touhidurrr
-// @version         0.0.4
+// @version         0.0.5
 // @description     A tools to change absolute urls to relative urls during accessing html files from device Storage.
 // @description:en  A tools to change absolute urls to relative urls during accessing html files from device Storage.
 // @author          touhidurrr
@@ -38,7 +38,7 @@
 
   const hostDepth = filePath.split('/').length;
 
-  let links = document.getElementsByTagName('a');
+  let links = document.getElementsByTagName('a') + document.getElementsByTagName('link');
   for (let link of links) {
     if (link.hostname == host) {
       if (link.href.endsWith('/')) link.href += 'index.html';
@@ -50,6 +50,25 @@
       if (hostDepth < linkDepth)
         link.href = link.pathname.slice(filePath.length);
       else link.href = sitePath + link.pathname;
+
+      // Log it!
+      console.log('Link changed to => ' + link.href);
+    }
+  }
+
+  links = document.getElementsByTagName('img');
+  for (let link of links) {
+    if (link.src.includes('://' + host)) {
+      if (link.src.endsWith('/')) link.src += 'index.html';
+      
+      const linkPath = link.src.substr(0, link.src.indexOf(host) + host.length);
+      const linkSlices = linkPath.split('/');
+      const linkDepth = linkSlices.length;
+
+      // Change the links!
+      if (hostDepth < linkDepth)
+        link.href = linkPath.slice(filePath.length);
+      else link.href = sitePath + linkPath;
 
       // Log it!
       console.log('Link changed to => ' + link.href);
