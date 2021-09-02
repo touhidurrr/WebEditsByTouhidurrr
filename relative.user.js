@@ -38,7 +38,8 @@
 
   const hostDepth = filePath.split('/').length;
 
-  let links = document.getElementsByTagName('a') + document.getElementsByTagName('link');
+  let links =
+    document.getElementsByTagName('a') + document.getElementsByTagName('link');
   for (let link of links) {
     if (link.hostname == host) {
       if (link.href.endsWith('/')) link.href += 'index.html';
@@ -60,14 +61,13 @@
   for (let link of links) {
     if (link.src.includes('://' + host)) {
       if (link.src.endsWith('/')) link.src += 'index.html';
-      
+
       const linkPath = link.src.substr(0, link.src.indexOf(host) + host.length);
       const linkSlices = linkPath.split('/');
       const linkDepth = linkSlices.length;
 
       // Change the links!
-      if (hostDepth < linkDepth)
-        link.href = linkPath.slice(filePath.length);
+      if (hostDepth < linkDepth) link.href = linkPath.slice(filePath.length);
       else link.href = sitePath + linkPath;
 
       // Log it!
