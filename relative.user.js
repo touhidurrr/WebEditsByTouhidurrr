@@ -38,7 +38,7 @@
     filePath = filePath.substr(0, filePath.length - 'index.html'.length);
 
   const hostDepth = filePath.split('/').length;
-  
+
   let links = document.getElementsByTagName('a');
   for (let link of links) {
     if (link.href.includes('://')) {
@@ -52,7 +52,7 @@
       img.src = rootPath + img.src.replace(/^http(s|):\/\//, '');
     }
   }
-  
+
   let anchors = document.getElementsByTagName('a');
   for (let link of anchors) {
     if (link.hostname == host) {
