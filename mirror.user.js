@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name            mirrorTouhidurrr
-// @version         0.0.3
+// @version         0.0.4
 // @description     redirects traffic through mirror.touhidur.xyz
 // @author          touhidurrr
 // @run-at          document-start
