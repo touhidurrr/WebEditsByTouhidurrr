@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            URL-touhidurrr
 // @name:en         URL-touhidurrr
-// @version         0.0.18
+// @version         0.0.19
 // @description     An URL redirection Manager for touhidurrr
 // @description:en  An URL redirection Manager for touhidurrr
 // @author          touhidurrr
@@ -35,7 +35,7 @@
     return;
   }
 
-  document.addEventListener('DOMContentLoaded', function (e) {
+  document.addEventListener('DOMContentLoaded', () => {
     let links = document.getElementsByTagName('a');
     for (let link of links) {
       if (link.protocol == 'http:') {
