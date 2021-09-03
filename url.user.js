@@ -18,21 +18,15 @@
 
 (function () {
   let excludeList = {
-    main: [
-    'ac.bd',
-      'gov.bd',
-      'teletalk.com.bd',
-      'touhidur',
-      'localhost',
-    ],
-  
+    main: ['ac.bd', 'gov.bd', 'teletalk.com.bd', 'touhidur', 'localhost'],
+
     includes(host) {
       for (let entry of this.main) {
-        if(host.endsWith(entry)) return true;
+        if (host.endsWith(entry)) return true;
       }
       return false;
-    }
-  }
+    },
+  };
 
   if (window.location.protocol == 'http:') {
     if (!excludeList.includes(window.location.host)) {
@@ -44,8 +38,8 @@
       for (let link of links) {
         if (link.protocol == 'http:') {
           if (!excludeList.includes(link.host)) {
-              link.protocol = 'https:';
-              console.log('Unsafe URL changed to => ' + link.href);
+            link.protocol = 'https:';
+            console.log('Unsafe URL changed to => ' + link.href);
           }
         }
       }
