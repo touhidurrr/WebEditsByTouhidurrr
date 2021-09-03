@@ -12,7 +12,7 @@
 
 (function () {
   let includeList = {
-    main:[
+    main: [
       'a-t.nu',
       'lightnovelstranslations.com',
       'graverobbertl.site',
@@ -29,7 +29,9 @@
   };
 
   if (includeList.includes(window.location.hostname)) {
-    window.location.replace(window.location.href.replace(/^http(s|):\/\//, mirror));
+    window.location.replace(
+      window.location.href.replace(/^http(s|):\/\//, mirror)
+    );
     return;
   }
 
