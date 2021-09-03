@@ -17,26 +17,36 @@
 // ==/UserScript==
 
 (function () {
-  let excludeList = [
+  let excludeList = {
+    main: [
     'ac.bd',
-    'gov.bd',
-    'teletalk.com.bd',
-    'touhidur',
-    'localhost',
-  ];
+      'gov.bd',
+      'teletalk.com.bd',
+      'touhidur',
+      'localhost',
+    ],
+  
+    includes(host) {
+      for (let entry of this.main) {
+        if(host.endsWith(entry)) return true;
+      }
+      return false;
+    }
+  }
 
   if (window.location.protocol == 'http:') {
-    if (!excludeList.includes(window.location.hostname)) {
-      window.location.replace('https' + window.location.href.slice(4));
+    if (!excludeList.includes(window.location.host)) {
+      window.location.protocol = 'https:';
     }
   } else {
     document.addEventListener('DOMContentLoaded', function (e) {
       let links = document.getElementsByTagName('a');
       for (let link of links) {
         if (link.protocol == 'http:') {
-          let ln = link.href.slice(4);
-          if (!excludeList.includes(ln.split('/')[0])) link.href = 'https' + ln;
-          console.log('Unsafe URL changed to => ' + link.href);
+          if (!excludeList.includes(link.host)) {
+              link.protocol = 'https:';
+              console.log('Unsafe URL changed to => ' + link.href);
+          }
         }
       }
     });
