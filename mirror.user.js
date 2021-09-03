@@ -28,6 +28,8 @@
     },
   };
 
+  let mirror = 'https://mirror.touhidur.xyz/';
+
   if (includeList.includes(window.location.hostname)) {
     window.location.replace(
       window.location.href.replace(/^http(s|):\/\//, mirror)
