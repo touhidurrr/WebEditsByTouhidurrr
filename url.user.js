@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            URL-touhidurrr
 // @name:en         URL-touhidurrr
-// @version         0.0.17
+// @version         0.0.18
 // @description     An URL redirection Manager for touhidurrr
 // @description:en  An URL redirection Manager for touhidurrr
 // @author          touhidurrr
@@ -32,17 +32,18 @@
     if (!excludeList.includes(window.location.host)) {
       window.location.protocol = 'https:';
     }
-  } else {
-    document.addEventListener('DOMContentLoaded', function (e) {
-      let links = document.getElementsByTagName('a');
-      for (let link of links) {
-        if (link.protocol == 'http:') {
-          if (!excludeList.includes(link.host)) {
-            link.protocol = 'https:';
-            console.log('Unsafe URL changed to => ' + link.href);
-          }
+    return;
+  }
+
+  document.addEventListener('DOMContentLoaded', function (e) {
+    let links = document.getElementsByTagName('a');
+    for (let link of links) {
+      if (link.protocol == 'http:') {
+        if (!excludeList.includes(link.host)) {
+          link.protocol = 'https:';
+          console.log('Unsafe URL changed to => ' + link.href);
         }
       }
-    });
-  }
+    }
+  });
 })();
