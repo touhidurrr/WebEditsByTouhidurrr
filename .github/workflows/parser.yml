@@ -18,8 +18,8 @@ jobs:
 
       - name: Install & Use Prettier
         run: |
-          sudo npm install --global prettier
-          prettier --write .
+          npm install -g prettier
+          prettier --write *.* meta/*
 
       - name: Generate Meta
         run: python3 ./.github/workflows/meta_generator.py
