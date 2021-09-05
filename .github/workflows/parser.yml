@@ -16,13 +16,13 @@ jobs:
           node-version: '16.x'
           check-latest: true
 
+      - name: Generate Meta
+        run: python3 ./.github/workflows/meta_generator.py
+
       - name: Install & Use Prettier
         run: |
           npm install -g prettier
           prettier --write *.* meta/*
-
-      - name: Generate Meta
-        run: python3 ./.github/workflows/meta_generator.py
 
       - name: Commit changes
         run: |
