@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name            Relative-touhidurrr
-// @version         0.0.8
+// @version         0.0.9
 // @description     A tools to change absolute urls to relative urls during accessing html files from device Storage.
 // @author          touhidurrr
 // @run-at          document-end
@@ -39,13 +39,13 @@
 
   [...document.getElementsByTagName('link')].forEach(link => {
     if (link.href.includes('://')) {
-      link.href = rootPath + link.href.replace(/^http(s|):\/\//, '');
+      link.href = rootPath + link.href.replace(/^https?:\/\//, '');
     }
   });
 
   [...document.getElementsByTagName('img')].forEach(img => {
     if (img.src.includes('://')) {
-      img.src = rootPath + img.src.replace(/^http(s|):\/\//, '');
+      img.src = rootPath + img.src.replace(/^https?:\/\//, '');
     }
   });
 

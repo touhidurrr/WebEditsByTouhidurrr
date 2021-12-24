@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name            mirrorTouhidurrr
-// @version         0.0.5
+// @version         0.0.6
 // @description     redirects traffic through mirror.touhidur.xyz
 // @author          touhidurrr
 // @run-at          document-start
@@ -32,7 +32,7 @@
 
   if (includeList.includes(window.location.hostname)) {
     window.location.replace(
-      window.location.href.replace(/^http(s|):\/\//, mirror)
+      window.location.href.replace(/^https?:\/\//, mirror)
     );
     return;
   }
@@ -40,7 +40,7 @@
   document.addEventListener('DOMContentLoaded', () => {
     [...document.getElementsByTagName('a')].forEach(link => {
       if (includeList.includes(link.host)) {
-        link.href = link.href.replace(/^http(s|):\/\//, mirror);
+        link.href = link.href.replace(/^https?:\/\//, mirror);
       }
     });
   });
