@@ -36,14 +36,13 @@
   }
 
   document.addEventListener('DOMContentLoaded', () => {
-    let links = document.getElementsByTagName('a');
-    for (let link of links) {
+    [...document.getElementsByTagName('a')].forEach(link => {
       if (link.protocol == 'http:') {
         if (!excludeList.includes(link.host)) {
           link.protocol = 'https:';
           console.log('Unsafe URL changed to => ' + link.href);
         }
       }
-    }
+    });
   });
 })();

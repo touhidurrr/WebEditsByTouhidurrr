@@ -37,22 +37,19 @@
 
   const hostDepth = filePath.split('/').length;
 
-  let links = document.getElementsByTagName('link');
-  for (let link of links) {
+  [...document.getElementsByTagName('link')].forEach(link => {
     if (link.href.includes('://')) {
       link.href = rootPath + link.href.replace(/^http(s|):\/\//, '');
     }
-  }
+  });
 
-  let images = document.getElementsByTagName('img');
-  for (let img of images) {
+  [...document.getElementsByTagName('img')].forEach(img => {
     if (img.src.includes('://')) {
       img.src = rootPath + img.src.replace(/^http(s|):\/\//, '');
     }
-  }
+  });
 
-  let anchors = document.getElementsByTagName('a');
-  for (let link of anchors) {
+  [...document.getElementsByTagName('a')].forEach(link => {
     if (link.hostname == host) {
       if (link.href.endsWith('/')) link.href += 'index.html';
 
@@ -67,5 +64,5 @@
       // Log it!
       console.log('Link changed to => ' + link.href);
     }
-  }
+  });
 })();

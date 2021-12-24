@@ -38,11 +38,10 @@
   }
 
   document.addEventListener('DOMContentLoaded', () => {
-    let links = document.getElementsByTagName('a');
-    for (let link of links) {
+    [...document.getElementsByTagName('a')].forEach(link => {
       if (includeList.includes(link.host)) {
         link.href = link.href.replace(/^http(s|):\/\//, mirror);
       }
-    }
+    });
   });
 })();
