@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name            Relative-touhidurrr
-// @version         0.0.7
+// @version         0.0.8
 // @description     A tools to change absolute urls to relative urls during accessing html files from device Storage.
 // @author          touhidurrr
 // @run-at          document-end
