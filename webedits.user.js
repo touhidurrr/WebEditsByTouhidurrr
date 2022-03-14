@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            WebEditsByTouhidurrr
 // @name:en         WebEditsByTouhidurrr
-// @version         0.0.24
+// @version         0.0.25
 // @description     WebEditsByTouhidurrr is an UserScript written in Javascript that does nothing but fixing the web as touhidurrr likes. Simply it's my personal UserScript.
 // @description:en  WebEditsByTouhidurrr is an UserScript written in Javascript that does nothing but fixing the web as touhidurrr likes. Simply it's my personal UserScript.
 // @author          touhidurrr
@@ -13,7 +13,7 @@
 // @updateURL       https://raw.githubusercontent.com/touhidurrr/WebEditsByTouhidurrr/main/meta/webedits.meta.js
 // @downloadURL     https://raw.githubusercontent.com/touhidurrr/WebEditsByTouhidurrr/main/webedits.user.js
 // @grant           none
-// @match           <all_urls>
+// @match           *://*/*
 // ==/UserScript==
 
 (function () {
@@ -23,6 +23,7 @@
   };
   if (location.host === 'discordbots.org') {
     location.host = 'top.gg';
+    return;
   }
   if (location.host === 'wordpress.com') {
     NodeList.prototype.remove = HTMLCollection.prototype.remove = function () {
