@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            WebEditsByTouhidurrr
 // @name:en         WebEditsByTouhidurrr
-// @version         0.0.25
+// @version         0.0.26
 // @description     WebEditsByTouhidurrr is an UserScript written in Javascript that does nothing but fixing the web as touhidurrr likes. Simply it's my personal UserScript.
 // @description:en  WebEditsByTouhidurrr is an UserScript written in Javascript that does nothing but fixing the web as touhidurrr likes. Simply it's my personal UserScript.
 // @author          touhidurrr
