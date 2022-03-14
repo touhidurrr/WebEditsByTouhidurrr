@@ -13,7 +13,7 @@
 // @updateURL       https://raw.githubusercontent.com/touhidurrr/WebEditsByTouhidurrr/main/meta/webedits.meta.js
 // @downloadURL     https://raw.githubusercontent.com/touhidurrr/WebEditsByTouhidurrr/main/webedits.user.js
 // @grant           none
-// @match           https://*.wordpress.com/*
+// @match           http*://*
 // ==/UserScript==
 
 (function () {
@@ -21,13 +21,18 @@
   Element.prototype.remove = function () {
     this.parentElement.removeChild(this);
   };
-  NodeList.prototype.remove = HTMLCollection.prototype.remove = function () {
-    for (let i = this.length - 1; i > -1; i--) {
-      if (this[i] && this[i].parentElement) {
-        this[i].parentElement.removeChild(this[i]);
+  if (location.host === 'discordbots.org') {
+    location.host = 'top.gg';
+  }
+  if (location.host === 'wordpress.com') {
+    NodeList.prototype.remove = HTMLCollection.prototype.remove = function () {
+      for (let i = this.length - 1; i > -1; i--) {
+        if (this[i] && this[i].parentElement) {
+          this[i].parentElement.removeChild(this[i]);
+        }
       }
-    }
-  };
-  document.getElementsByTagName('script').remove();
-  document.getElementById('marketingbar').remove();
+    };
+    document.getElementsByTagName('script').remove();
+    document.getElementById('marketingbar').remove();
+  }
 })();
