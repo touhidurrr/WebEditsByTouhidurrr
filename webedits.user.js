@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            WebEditsByTouhidurrr
 // @name:en         WebEditsByTouhidurrr
-// @version         0.0.23
+// @version         0.0.24
 // @description     WebEditsByTouhidurrr is an UserScript written in Javascript that does nothing but fixing the web as touhidurrr likes. Simply it's my personal UserScript.
 // @description:en  WebEditsByTouhidurrr is an UserScript written in Javascript that does nothing but fixing the web as touhidurrr likes. Simply it's my personal UserScript.
 // @author          touhidurrr
@@ -13,7 +13,7 @@
 // @updateURL       https://raw.githubusercontent.com/touhidurrr/WebEditsByTouhidurrr/main/meta/webedits.meta.js
 // @downloadURL     https://raw.githubusercontent.com/touhidurrr/WebEditsByTouhidurrr/main/webedits.user.js
 // @grant           none
-// @match           http*://*
+// @match           <all_urls>
 // ==/UserScript==
 
 (function () {
