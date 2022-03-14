@@ -5,7 +5,7 @@
 // @description     WebEditsByTouhidurrr is an UserScript written in Javascript that does nothing but fixing the web as touhidurrr likes. Simply it's my personal UserScript.
 // @description:en  WebEditsByTouhidurrr is an UserScript written in Javascript that does nothing but fixing the web as touhidurrr likes. Simply it's my personal UserScript.
 // @author          touhidurrr
-// @run-at          document-end
+// @run-at          document-start
 // @icon            https://touhidur.xyz/favicon.png
 // @namespace       https://github.com/touhidurrr
 // @homepageURL     https://touhidur.xyz/
