@@ -13,7 +13,7 @@
 // @updateURL       https://raw.githubusercontent.com/touhidurrr/WebEditsByTouhidurrr/main/meta/webedits.meta.js
 // @downloadURL     https://raw.githubusercontent.com/touhidurrr/WebEditsByTouhidurrr/main/webedits.user.js
 // @grant           none
-// @match           *://*/*
+// @include         /^https?:\/\//
 // ==/UserScript==
 
 (function () {
